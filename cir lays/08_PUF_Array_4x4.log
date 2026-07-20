@@ -1,0 +1,370 @@
+LTspice 26.0.2 for Windows
+Circuit: C:\Users\taher\OneDrive\Desktop\spi\08_PUF_Array_4x4.spi
+Start Time: Thu Jul  2 10:59:49 2026
+Options:DEFL=3UM DEFW=3UM DEFAD=70P DEFAS=70P RELTOL=0.01
+solver = Normal
+Maximum thread count: 8
+tnom = 27
+temp = 27
+method = trap
+reltol = 0.01
+Model "nmos": Oxide thickness thinner than recommended for a level 1 MOSFET.
+Instance "x00:MNL": Length shorter than recommended for a level 1 MOSFET.
+Instance "x00:MNL": Width narrower than recommended for a level 1 MOSFET.
+Instance "x00:xsch:Mn0": Length shorter than recommended for a level 1 MOSFET.
+Instance "x00:xsch:Mn0": Width narrower than recommended for a level 1 MOSFET.
+Instance "x00:xsch:Mn1": Length shorter than recommended for a level 1 MOSFET.
+Instance "x00:xsch:Mn1": Width narrower than recommended for a level 1 MOSFET.
+Instance "x00:xsch:Mn2": Length shorter than recommended for a level 1 MOSFET.
+Instance "x00:xsch:Mn2": Width narrower than recommended for a level 1 MOSFET.
+Instance "x01:MNL": Length shorter than recommended for a level 1 MOSFET.
+Instance "x01:MNL": Width narrower than recommended for a level 1 MOSFET.
+Instance "x01:xsch:Mn0": Length shorter than recommended for a level 1 MOSFET.
+Instance "x01:xsch:Mn0": Width narrower than recommended for a level 1 MOSFET.
+Instance "x01:xsch:Mn1": Length shorter than recommended for a level 1 MOSFET.
+Instance "x01:xsch:Mn1": Width narrower than recommended for a level 1 MOSFET.
+Instance "x01:xsch:Mn2": Length shorter than recommended for a level 1 MOSFET.
+Instance "x01:xsch:Mn2": Width narrower than recommended for a level 1 MOSFET.
+Instance "x02:MNL": Length shorter than recommended for a level 1 MOSFET.
+Instance "x02:MNL": Width narrower than recommended for a level 1 MOSFET.
+Instance "x02:xsch:Mn0": Length shorter than recommended for a level 1 MOSFET.
+Instance "x02:xsch:Mn0": Width narrower than recommended for a level 1 MOSFET.
+Instance "x02:xsch:Mn1": Length shorter than recommended for a level 1 MOSFET.
+Instance "x02:xsch:Mn1": Width narrower than recommended for a level 1 MOSFET.
+Instance "x02:xsch:Mn2": Length shorter than recommended for a level 1 MOSFET.
+Instance "x02:xsch:Mn2": Width narrower than recommended for a level 1 MOSFET.
+Instance "x03:MNL": Length shorter than recommended for a level 1 MOSFET.
+Instance "x03:MNL": Width narrower than recommended for a level 1 MOSFET.
+Instance "x03:xsch:Mn0": Length shorter than recommended for a level 1 MOSFET.
+Instance "x03:xsch:Mn0": Width narrower than recommended for a level 1 MOSFET.
+Instance "x03:xsch:Mn1": Length shorter than recommended for a level 1 MOSFET.
+Instance "x03:xsch:Mn1": Width narrower than recommended for a level 1 MOSFET.
+Instance "x03:xsch:Mn2": Length shorter than recommended for a level 1 MOSFET.
+Instance "x03:xsch:Mn2": Width narrower than recommended for a level 1 MOSFET.
+Instance "x10:MNL": Length shorter than recommended for a level 1 MOSFET.
+Instance "x10:MNL": Width narrower than recommended for a level 1 MOSFET.
+Instance "x10:xsch:Mn0": Length shorter than recommended for a level 1 MOSFET.
+Instance "x10:xsch:Mn0": Width narrower than recommended for a level 1 MOSFET.
+Instance "x10:xsch:Mn1": Length shorter than recommended for a level 1 MOSFET.
+Instance "x10:xsch:Mn1": Width narrower than recommended for a level 1 MOSFET.
+Instance "x10:xsch:Mn2": Length shorter than recommended for a level 1 MOSFET.
+Instance "x10:xsch:Mn2": Width narrower than recommended for a level 1 MOSFET.
+Instance "x11:MNL": Length shorter than recommended for a level 1 MOSFET.
+Instance "x11:MNL": Width narrower than recommended for a level 1 MOSFET.
+Instance "x11:xsch:Mn0": Length shorter than recommended for a level 1 MOSFET.
+Instance "x11:xsch:Mn0": Width narrower than recommended for a level 1 MOSFET.
+Instance "x11:xsch:Mn1": Length shorter than recommended for a level 1 MOSFET.
+Instance "x11:xsch:Mn1": Width narrower than recommended for a level 1 MOSFET.
+Instance "x11:xsch:Mn2": Length shorter than recommended for a level 1 MOSFET.
+Instance "x11:xsch:Mn2": Width narrower than recommended for a level 1 MOSFET.
+Instance "x12:MNL": Length shorter than recommended for a level 1 MOSFET.
+Instance "x12:MNL": Width narrower than recommended for a level 1 MOSFET.
+Instance "x12:xsch:Mn0": Length shorter than recommended for a level 1 MOSFET.
+Instance "x12:xsch:Mn0": Width narrower than recommended for a level 1 MOSFET.
+Instance "x12:xsch:Mn1": Length shorter than recommended for a level 1 MOSFET.
+Instance "x12:xsch:Mn1": Width narrower than recommended for a level 1 MOSFET.
+Instance "x12:xsch:Mn2": Length shorter than recommended for a level 1 MOSFET.
+Instance "x12:xsch:Mn2": Width narrower than recommended for a level 1 MOSFET.
+Instance "x13:MNL": Length shorter than recommended for a level 1 MOSFET.
+Instance "x13:MNL": Width narrower than recommended for a level 1 MOSFET.
+Instance "x13:xsch:Mn0": Length shorter than recommended for a level 1 MOSFET.
+Instance "x13:xsch:Mn0": Width narrower than recommended for a level 1 MOSFET.
+Instance "x13:xsch:Mn1": Length shorter than recommended for a level 1 MOSFET.
+Instance "x13:xsch:Mn1": Width narrower than recommended for a level 1 MOSFET.
+Instance "x13:xsch:Mn2": Length shorter than recommended for a level 1 MOSFET.
+Instance "x13:xsch:Mn2": Width narrower than recommended for a level 1 MOSFET.
+Instance "x20:MNL": Length shorter than recommended for a level 1 MOSFET.
+Instance "x20:MNL": Width narrower than recommended for a level 1 MOSFET.
+Instance "x20:xsch:Mn0": Length shorter than recommended for a level 1 MOSFET.
+Instance "x20:xsch:Mn0": Width narrower than recommended for a level 1 MOSFET.
+Instance "x20:xsch:Mn1": Length shorter than recommended for a level 1 MOSFET.
+Instance "x20:xsch:Mn1": Width narrower than recommended for a level 1 MOSFET.
+Instance "x20:xsch:Mn2": Length shorter than recommended for a level 1 MOSFET.
+Instance "x20:xsch:Mn2": Width narrower than recommended for a level 1 MOSFET.
+Instance "x21:MNL": Length shorter than recommended for a level 1 MOSFET.
+Instance "x21:MNL": Width narrower than recommended for a level 1 MOSFET.
+Instance "x21:xsch:Mn0": Length shorter than recommended for a level 1 MOSFET.
+Instance "x21:xsch:Mn0": Width narrower than recommended for a level 1 MOSFET.
+Instance "x21:xsch:Mn1": Length shorter than recommended for a level 1 MOSFET.
+Instance "x21:xsch:Mn1": Width narrower than recommended for a level 1 MOSFET.
+Instance "x21:xsch:Mn2": Length shorter than recommended for a level 1 MOSFET.
+Instance "x21:xsch:Mn2": Width narrower than recommended for a level 1 MOSFET.
+Instance "x22:MNL": Length shorter than recommended for a level 1 MOSFET.
+Instance "x22:MNL": Width narrower than recommended for a level 1 MOSFET.
+Instance "x22:xsch:Mn0": Length shorter than recommended for a level 1 MOSFET.
+Instance "x22:xsch:Mn0": Width narrower than recommended for a level 1 MOSFET.
+Instance "x22:xsch:Mn1": Length shorter than recommended for a level 1 MOSFET.
+Instance "x22:xsch:Mn1": Width narrower than recommended for a level 1 MOSFET.
+Instance "x22:xsch:Mn2": Length shorter than recommended for a level 1 MOSFET.
+Instance "x22:xsch:Mn2": Width narrower than recommended for a level 1 MOSFET.
+Instance "x23:MNL": Length shorter than recommended for a level 1 MOSFET.
+Instance "x23:MNL": Width narrower than recommended for a level 1 MOSFET.
+Instance "x23:xsch:Mn0": Length shorter than recommended for a level 1 MOSFET.
+Instance "x23:xsch:Mn0": Width narrower than recommended for a level 1 MOSFET.
+Instance "x23:xsch:Mn1": Length shorter than recommended for a level 1 MOSFET.
+Instance "x23:xsch:Mn1": Width narrower than recommended for a level 1 MOSFET.
+Instance "x23:xsch:Mn2": Length shorter than recommended for a level 1 MOSFET.
+Instance "x23:xsch:Mn2": Width narrower than recommended for a level 1 MOSFET.
+Instance "x30:MNL": Length shorter than recommended for a level 1 MOSFET.
+Instance "x30:MNL": Width narrower than recommended for a level 1 MOSFET.
+Instance "x30:xsch:Mn0": Length shorter than recommended for a level 1 MOSFET.
+Instance "x30:xsch:Mn0": Width narrower than recommended for a level 1 MOSFET.
+Instance "x30:xsch:Mn1": Length shorter than recommended for a level 1 MOSFET.
+Instance "x30:xsch:Mn1": Width narrower than recommended for a level 1 MOSFET.
+Instance "x30:xsch:Mn2": Length shorter than recommended for a level 1 MOSFET.
+Instance "x30:xsch:Mn2": Width narrower than recommended for a level 1 MOSFET.
+Instance "x31:MNL": Length shorter than recommended for a level 1 MOSFET.
+Instance "x31:MNL": Width narrower than recommended for a level 1 MOSFET.
+Instance "x31:xsch:Mn0": Length shorter than recommended for a level 1 MOSFET.
+Instance "x31:xsch:Mn0": Width narrower than recommended for a level 1 MOSFET.
+Instance "x31:xsch:Mn1": Length shorter than recommended for a level 1 MOSFET.
+Instance "x31:xsch:Mn1": Width narrower than recommended for a level 1 MOSFET.
+Instance "x31:xsch:Mn2": Length shorter than recommended for a level 1 MOSFET.
+Instance "x31:xsch:Mn2": Width narrower than recommended for a level 1 MOSFET.
+Instance "x32:MNL": Length shorter than recommended for a level 1 MOSFET.
+Instance "x32:MNL": Width narrower than recommended for a level 1 MOSFET.
+Instance "x32:xsch:Mn0": Length shorter than recommended for a level 1 MOSFET.
+Instance "x32:xsch:Mn0": Width narrower than recommended for a level 1 MOSFET.
+Instance "x32:xsch:Mn1": Length shorter than recommended for a level 1 MOSFET.
+Instance "x32:xsch:Mn1": Width narrower than recommended for a level 1 MOSFET.
+Instance "x32:xsch:Mn2": Length shorter than recommended for a level 1 MOSFET.
+Instance "x32:xsch:Mn2": Width narrower than recommended for a level 1 MOSFET.
+Instance "x33:MNL": Length shorter than recommended for a level 1 MOSFET.
+Instance "x33:MNL": Width narrower than recommended for a level 1 MOSFET.
+Instance "x33:xsch:Mn0": Length shorter than recommended for a level 1 MOSFET.
+Instance "x33:xsch:Mn0": Width narrower than recommended for a level 1 MOSFET.
+Instance "x33:xsch:Mn1": Length shorter than recommended for a level 1 MOSFET.
+Instance "x33:xsch:Mn1": Width narrower than recommended for a level 1 MOSFET.
+Instance "x33:xsch:Mn2": Length shorter than recommended for a level 1 MOSFET.
+Instance "x33:xsch:Mn2": Width narrower than recommended for a level 1 MOSFET.
+Model "pmos": Oxide thickness thinner than recommended for a level 1 MOSFET.
+Instance "x00:MPL": Length shorter than recommended for a level 1 MOSFET.
+Instance "x00:MPL": Width narrower than recommended for a level 1 MOSFET.
+Instance "x00:MPR": Length shorter than recommended for a level 1 MOSFET.
+Instance "x00:MPR": Width narrower than recommended for a level 1 MOSFET.
+Instance "x00:xsch:Mp1": Length shorter than recommended for a level 1 MOSFET.
+Instance "x00:xsch:Mp1": Width narrower than recommended for a level 1 MOSFET.
+Instance "x00:xsch:Mp2": Length shorter than recommended for a level 1 MOSFET.
+Instance "x00:xsch:Mp2": Width narrower than recommended for a level 1 MOSFET.
+Instance "x00:xsch:Mp3": Length shorter than recommended for a level 1 MOSFET.
+Instance "x00:xsch:Mp3": Width narrower than recommended for a level 1 MOSFET.
+Instance "x01:MPL": Length shorter than recommended for a level 1 MOSFET.
+Instance "x01:MPL": Width narrower than recommended for a level 1 MOSFET.
+Instance "x01:MPR": Length shorter than recommended for a level 1 MOSFET.
+Instance "x01:MPR": Width narrower than recommended for a level 1 MOSFET.
+Instance "x01:xsch:Mp1": Length shorter than recommended for a level 1 MOSFET.
+Instance "x01:xsch:Mp1": Width narrower than recommended for a level 1 MOSFET.
+Instance "x01:xsch:Mp2": Length shorter than recommended for a level 1 MOSFET.
+Instance "x01:xsch:Mp2": Width narrower than recommended for a level 1 MOSFET.
+Instance "x01:xsch:Mp3": Length shorter than recommended for a level 1 MOSFET.
+Instance "x01:xsch:Mp3": Width narrower than recommended for a level 1 MOSFET.
+Instance "x02:MPL": Length shorter than recommended for a level 1 MOSFET.
+Instance "x02:MPL": Width narrower than recommended for a level 1 MOSFET.
+Instance "x02:MPR": Length shorter than recommended for a level 1 MOSFET.
+Instance "x02:MPR": Width narrower than recommended for a level 1 MOSFET.
+Instance "x02:xsch:Mp1": Length shorter than recommended for a level 1 MOSFET.
+Instance "x02:xsch:Mp1": Width narrower than recommended for a level 1 MOSFET.
+Instance "x02:xsch:Mp2": Length shorter than recommended for a level 1 MOSFET.
+Instance "x02:xsch:Mp2": Width narrower than recommended for a level 1 MOSFET.
+Instance "x02:xsch:Mp3": Length shorter than recommended for a level 1 MOSFET.
+Instance "x02:xsch:Mp3": Width narrower than recommended for a level 1 MOSFET.
+Instance "x03:MPL": Length shorter than recommended for a level 1 MOSFET.
+Instance "x03:MPL": Width narrower than recommended for a level 1 MOSFET.
+Instance "x03:MPR": Length shorter than recommended for a level 1 MOSFET.
+Instance "x03:MPR": Width narrower than recommended for a level 1 MOSFET.
+Instance "x03:xsch:Mp1": Length shorter than recommended for a level 1 MOSFET.
+Instance "x03:xsch:Mp1": Width narrower than recommended for a level 1 MOSFET.
+Instance "x03:xsch:Mp2": Length shorter than recommended for a level 1 MOSFET.
+Instance "x03:xsch:Mp2": Width narrower than recommended for a level 1 MOSFET.
+Instance "x03:xsch:Mp3": Length shorter than recommended for a level 1 MOSFET.
+Instance "x03:xsch:Mp3": Width narrower than recommended for a level 1 MOSFET.
+Instance "x10:MPL": Length shorter than recommended for a level 1 MOSFET.
+Instance "x10:MPL": Width narrower than recommended for a level 1 MOSFET.
+Instance "x10:MPR": Length shorter than recommended for a level 1 MOSFET.
+Instance "x10:MPR": Width narrower than recommended for a level 1 MOSFET.
+Instance "x10:xsch:Mp1": Length shorter than recommended for a level 1 MOSFET.
+Instance "x10:xsch:Mp1": Width narrower than recommended for a level 1 MOSFET.
+Instance "x10:xsch:Mp2": Length shorter than recommended for a level 1 MOSFET.
+Instance "x10:xsch:Mp2": Width narrower than recommended for a level 1 MOSFET.
+Instance "x10:xsch:Mp3": Length shorter than recommended for a level 1 MOSFET.
+Instance "x10:xsch:Mp3": Width narrower than recommended for a level 1 MOSFET.
+Instance "x11:MPL": Length shorter than recommended for a level 1 MOSFET.
+Instance "x11:MPL": Width narrower than recommended for a level 1 MOSFET.
+Instance "x11:MPR": Length shorter than recommended for a level 1 MOSFET.
+Instance "x11:MPR": Width narrower than recommended for a level 1 MOSFET.
+Instance "x11:xsch:Mp1": Length shorter than recommended for a level 1 MOSFET.
+Instance "x11:xsch:Mp1": Width narrower than recommended for a level 1 MOSFET.
+Instance "x11:xsch:Mp2": Length shorter than recommended for a level 1 MOSFET.
+Instance "x11:xsch:Mp2": Width narrower than recommended for a level 1 MOSFET.
+Instance "x11:xsch:Mp3": Length shorter than recommended for a level 1 MOSFET.
+Instance "x11:xsch:Mp3": Width narrower than recommended for a level 1 MOSFET.
+Instance "x12:MPL": Length shorter than recommended for a level 1 MOSFET.
+Instance "x12:MPL": Width narrower than recommended for a level 1 MOSFET.
+Instance "x12:MPR": Length shorter than recommended for a level 1 MOSFET.
+Instance "x12:MPR": Width narrower than recommended for a level 1 MOSFET.
+Instance "x12:xsch:Mp1": Length shorter than recommended for a level 1 MOSFET.
+Instance "x12:xsch:Mp1": Width narrower than recommended for a level 1 MOSFET.
+Instance "x12:xsch:Mp2": Length shorter than recommended for a level 1 MOSFET.
+Instance "x12:xsch:Mp2": Width narrower than recommended for a level 1 MOSFET.
+Instance "x12:xsch:Mp3": Length shorter than recommended for a level 1 MOSFET.
+Instance "x12:xsch:Mp3": Width narrower than recommended for a level 1 MOSFET.
+Instance "x13:MPL": Length shorter than recommended for a level 1 MOSFET.
+Instance "x13:MPL": Width narrower than recommended for a level 1 MOSFET.
+Instance "x13:MPR": Length shorter than recommended for a level 1 MOSFET.
+Instance "x13:MPR": Width narrower than recommended for a level 1 MOSFET.
+Instance "x13:xsch:Mp1": Length shorter than recommended for a level 1 MOSFET.
+Instance "x13:xsch:Mp1": Width narrower than recommended for a level 1 MOSFET.
+Instance "x13:xsch:Mp2": Length shorter than recommended for a level 1 MOSFET.
+Instance "x13:xsch:Mp2": Width narrower than recommended for a level 1 MOSFET.
+Instance "x13:xsch:Mp3": Length shorter than recommended for a level 1 MOSFET.
+Instance "x13:xsch:Mp3": Width narrower than recommended for a level 1 MOSFET.
+Instance "x20:MPL": Length shorter than recommended for a level 1 MOSFET.
+Instance "x20:MPL": Width narrower than recommended for a level 1 MOSFET.
+Instance "x20:MPR": Length shorter than recommended for a level 1 MOSFET.
+Instance "x20:MPR": Width narrower than recommended for a level 1 MOSFET.
+Instance "x20:xsch:Mp1": Length shorter than recommended for a level 1 MOSFET.
+Instance "x20:xsch:Mp1": Width narrower than recommended for a level 1 MOSFET.
+Instance "x20:xsch:Mp2": Length shorter than recommended for a level 1 MOSFET.
+Instance "x20:xsch:Mp2": Width narrower than recommended for a level 1 MOSFET.
+Instance "x20:xsch:Mp3": Length shorter than recommended for a level 1 MOSFET.
+Instance "x20:xsch:Mp3": Width narrower than recommended for a level 1 MOSFET.
+Instance "x21:MPL": Length shorter than recommended for a level 1 MOSFET.
+Instance "x21:MPL": Width narrower than recommended for a level 1 MOSFET.
+Instance "x21:MPR": Length shorter than recommended for a level 1 MOSFET.
+Instance "x21:MPR": Width narrower than recommended for a level 1 MOSFET.
+Instance "x21:xsch:Mp1": Length shorter than recommended for a level 1 MOSFET.
+Instance "x21:xsch:Mp1": Width narrower than recommended for a level 1 MOSFET.
+Instance "x21:xsch:Mp2": Length shorter than recommended for a level 1 MOSFET.
+Instance "x21:xsch:Mp2": Width narrower than recommended for a level 1 MOSFET.
+Instance "x21:xsch:Mp3": Length shorter than recommended for a level 1 MOSFET.
+Instance "x21:xsch:Mp3": Width narrower than recommended for a level 1 MOSFET.
+Instance "x22:MPL": Length shorter than recommended for a level 1 MOSFET.
+Instance "x22:MPL": Width narrower than recommended for a level 1 MOSFET.
+Instance "x22:MPR": Length shorter than recommended for a level 1 MOSFET.
+Instance "x22:MPR": Width narrower than recommended for a level 1 MOSFET.
+Instance "x22:xsch:Mp1": Length shorter than recommended for a level 1 MOSFET.
+Instance "x22:xsch:Mp1": Width narrower than recommended for a level 1 MOSFET.
+Instance "x22:xsch:Mp2": Length shorter than recommended for a level 1 MOSFET.
+Instance "x22:xsch:Mp2": Width narrower than recommended for a level 1 MOSFET.
+Instance "x22:xsch:Mp3": Length shorter than recommended for a level 1 MOSFET.
+Instance "x22:xsch:Mp3": Width narrower than recommended for a level 1 MOSFET.
+Instance "x23:MPL": Length shorter than recommended for a level 1 MOSFET.
+Instance "x23:MPL": Width narrower than recommended for a level 1 MOSFET.
+Instance "x23:MPR": Length shorter than recommended for a level 1 MOSFET.
+Instance "x23:MPR": Width narrower than recommended for a level 1 MOSFET.
+Instance "x23:xsch:Mp1": Length shorter than recommended for a level 1 MOSFET.
+Instance "x23:xsch:Mp1": Width narrower than recommended for a level 1 MOSFET.
+Instance "x23:xsch:Mp2": Length shorter than recommended for a level 1 MOSFET.
+Instance "x23:xsch:Mp2": Width narrower than recommended for a level 1 MOSFET.
+Instance "x23:xsch:Mp3": Length shorter than recommended for a level 1 MOSFET.
+Instance "x23:xsch:Mp3": Width narrower than recommended for a level 1 MOSFET.
+Instance "x30:MPL": Length shorter than recommended for a level 1 MOSFET.
+Instance "x30:MPL": Width narrower than recommended for a level 1 MOSFET.
+Instance "x30:MPR": Length shorter than recommended for a level 1 MOSFET.
+Instance "x30:MPR": Width narrower than recommended for a level 1 MOSFET.
+Instance "x30:xsch:Mp1": Length shorter than recommended for a level 1 MOSFET.
+Instance "x30:xsch:Mp1": Width narrower than recommended for a level 1 MOSFET.
+Instance "x30:xsch:Mp2": Length shorter than recommended for a level 1 MOSFET.
+Instance "x30:xsch:Mp2": Width narrower than recommended for a level 1 MOSFET.
+Instance "x30:xsch:Mp3": Length shorter than recommended for a level 1 MOSFET.
+Instance "x30:xsch:Mp3": Width narrower than recommended for a level 1 MOSFET.
+Instance "x31:MPL": Length shorter than recommended for a level 1 MOSFET.
+Instance "x31:MPL": Width narrower than recommended for a level 1 MOSFET.
+Instance "x31:MPR": Length shorter than recommended for a level 1 MOSFET.
+Instance "x31:MPR": Width narrower than recommended for a level 1 MOSFET.
+Instance "x31:xsch:Mp1": Length shorter than recommended for a level 1 MOSFET.
+Instance "x31:xsch:Mp1": Width narrower than recommended for a level 1 MOSFET.
+Instance "x31:xsch:Mp2": Length shorter than recommended for a level 1 MOSFET.
+Instance "x31:xsch:Mp2": Width narrower than recommended for a level 1 MOSFET.
+Instance "x31:xsch:Mp3": Length shorter than recommended for a level 1 MOSFET.
+Instance "x31:xsch:Mp3": Width narrower than recommended for a level 1 MOSFET.
+Instance "x32:MPL": Length shorter than recommended for a level 1 MOSFET.
+Instance "x32:MPL": Width narrower than recommended for a level 1 MOSFET.
+Instance "x32:MPR": Length shorter than recommended for a level 1 MOSFET.
+Instance "x32:MPR": Width narrower than recommended for a level 1 MOSFET.
+Instance "x32:xsch:Mp1": Length shorter than recommended for a level 1 MOSFET.
+Instance "x32:xsch:Mp1": Width narrower than recommended for a level 1 MOSFET.
+Instance "x32:xsch:Mp2": Length shorter than recommended for a level 1 MOSFET.
+Instance "x32:xsch:Mp2": Width narrower than recommended for a level 1 MOSFET.
+Instance "x32:xsch:Mp3": Length shorter than recommended for a level 1 MOSFET.
+Instance "x32:xsch:Mp3": Width narrower than recommended for a level 1 MOSFET.
+Instance "x33:MPL": Length shorter than recommended for a level 1 MOSFET.
+Instance "x33:MPL": Width narrower than recommended for a level 1 MOSFET.
+Instance "x33:MPR": Length shorter than recommended for a level 1 MOSFET.
+Instance "x33:MPR": Width narrower than recommended for a level 1 MOSFET.
+Instance "x33:xsch:Mp1": Length shorter than recommended for a level 1 MOSFET.
+Instance "x33:xsch:Mp1": Width narrower than recommended for a level 1 MOSFET.
+Instance "x33:xsch:Mp2": Length shorter than recommended for a level 1 MOSFET.
+Instance "x33:xsch:Mp2": Width narrower than recommended for a level 1 MOSFET.
+Instance "x33:xsch:Mp3": Length shorter than recommended for a level 1 MOSFET.
+Instance "x33:xsch:Mp3": Width narrower than recommended for a level 1 MOSFET.
+Model "n2": Oxide thickness thinner than recommended for a level 1 MOSFET.
+Instance "x00:MNR": Length shorter than recommended for a level 1 MOSFET.
+Instance "x00:MNR": Width narrower than recommended for a level 1 MOSFET.
+Model "n2": Oxide thickness thinner than recommended for a level 1 MOSFET.
+Instance "x01:MNR": Length shorter than recommended for a level 1 MOSFET.
+Instance "x01:MNR": Width narrower than recommended for a level 1 MOSFET.
+Model "n2": Oxide thickness thinner than recommended for a level 1 MOSFET.
+Instance "x02:MNR": Length shorter than recommended for a level 1 MOSFET.
+Instance "x02:MNR": Width narrower than recommended for a level 1 MOSFET.
+Model "n2": Oxide thickness thinner than recommended for a level 1 MOSFET.
+Instance "x03:MNR": Length shorter than recommended for a level 1 MOSFET.
+Instance "x03:MNR": Width narrower than recommended for a level 1 MOSFET.
+Model "n2": Oxide thickness thinner than recommended for a level 1 MOSFET.
+Instance "x10:MNR": Length shorter than recommended for a level 1 MOSFET.
+Instance "x10:MNR": Width narrower than recommended for a level 1 MOSFET.
+Model "n2": Oxide thickness thinner than recommended for a level 1 MOSFET.
+Instance "x11:MNR": Length shorter than recommended for a level 1 MOSFET.
+Instance "x11:MNR": Width narrower than recommended for a level 1 MOSFET.
+Model "n2": Oxide thickness thinner than recommended for a level 1 MOSFET.
+Instance "x12:MNR": Length shorter than recommended for a level 1 MOSFET.
+Instance "x12:MNR": Width narrower than recommended for a level 1 MOSFET.
+Model "n2": Oxide thickness thinner than recommended for a level 1 MOSFET.
+Instance "x13:MNR": Length shorter than recommended for a level 1 MOSFET.
+Instance "x13:MNR": Width narrower than recommended for a level 1 MOSFET.
+Model "n2": Oxide thickness thinner than recommended for a level 1 MOSFET.
+Instance "x20:MNR": Length shorter than recommended for a level 1 MOSFET.
+Instance "x20:MNR": Width narrower than recommended for a level 1 MOSFET.
+Model "n2": Oxide thickness thinner than recommended for a level 1 MOSFET.
+Instance "x21:MNR": Length shorter than recommended for a level 1 MOSFET.
+Instance "x21:MNR": Width narrower than recommended for a level 1 MOSFET.
+Model "n2": Oxide thickness thinner than recommended for a level 1 MOSFET.
+Instance "x22:MNR": Length shorter than recommended for a level 1 MOSFET.
+Instance "x22:MNR": Width narrower than recommended for a level 1 MOSFET.
+Model "n2": Oxide thickness thinner than recommended for a level 1 MOSFET.
+Instance "x23:MNR": Length shorter than recommended for a level 1 MOSFET.
+Instance "x23:MNR": Width narrower than recommended for a level 1 MOSFET.
+Model "n2": Oxide thickness thinner than recommended for a level 1 MOSFET.
+Instance "x30:MNR": Length shorter than recommended for a level 1 MOSFET.
+Instance "x30:MNR": Width narrower than recommended for a level 1 MOSFET.
+Model "n2": Oxide thickness thinner than recommended for a level 1 MOSFET.
+Instance "x31:MNR": Length shorter than recommended for a level 1 MOSFET.
+Instance "x31:MNR": Width narrower than recommended for a level 1 MOSFET.
+Model "n2": Oxide thickness thinner than recommended for a level 1 MOSFET.
+Instance "x32:MNR": Length shorter than recommended for a level 1 MOSFET.
+Instance "x32:MNR": Width narrower than recommended for a level 1 MOSFET.
+Model "n2": Oxide thickness thinner than recommended for a level 1 MOSFET.
+Instance "x33:MNR": Length shorter than recommended for a level 1 MOSFET.
+Instance "x33:MNR": Width narrower than recommended for a level 1 MOSFET.
+Per .tran options, skipping operating point for transient analysis.
+Total elapsed time: 1.354 seconds.
+
+Files loaded:
+C:\Users\taher\OneDrive\Desktop\spi\08_PUF_Array_4x4.spi
+
+b00: V(B00) =5 at 3.5e-07
+b01: V(B01) =5 at 3.5e-07
+b02: V(B02) =5 at 3.5e-07
+b03: V(B03) =5 at 3.5e-07
+b10: V(B10) =5 at 3.5e-07
+b11: V(B11) =5 at 3.5e-07
+b12: V(B12) =0.0919924974442 at 3.5e-07
+b13: V(B13) =5 at 3.5e-07
+b20: V(B20) =5 at 3.5e-07
+b21: V(B21) =5 at 3.5e-07
+b22: V(B22) =5 at 3.5e-07
+b23: V(B23) =5 at 3.5e-07
+b30: V(B30) =0.0919924974442 at 3.5e-07
+b31: V(B31) =5 at 3.5e-07
+b32: V(B32) =5 at 3.5e-07
+b33: V(B33) =5 at 3.5e-07

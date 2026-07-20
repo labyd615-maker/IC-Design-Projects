@@ -1,0 +1,72 @@
+*** 4x4 PUF Array (16 cells) - built from working PUF cell ***
+*** Each cell = 6T SRAM (mismatch) + Schmitt readout ***
+.OPTIONS DEFL=3UM DEFW=3UM DEFAD=70P DEFAS=70P RELTOL=0.01
+.MODEL NMOS NMOS LEVEL=1
++KP=60E-6 VTO=0.7 GAMMA=0.3 LAMBDA=0.05 PHI=0.6
++TOX=40E-9 CGSO=2.0E-10 CGDO=2.0E-10 CJ=.2M
+.MODEL PMOS PMOS LEVEL=1
++KP=20E-6 VTO=0.7 GAMMA=0.4 LAMBDA=0.05 PHI=0.6
++TOX=40E-9 CGSO=3.0E-10 CGDO=3.0E-10 CJ=.2M
+*
+*** Schmitt trigger subckt ***
+.SUBCKT SCHMITT gnd IN OUT vdd
+Mn0 gnd IN net24 gnd NMOS L=0.6U W=3U
+Mn1 net24 IN OUT gnd NMOS L=0.6U W=3U
+Mn2 net24 OUT OUT gnd NMOS L=0.6U W=1.5U
+Mp1 net22 IN OUT vdd PMOS L=0.6U W=6U
+Mp2 vdd IN net22 vdd PMOS L=0.6U W=6U
+Mp3 net22 OUT OUT vdd PMOS L=0.6U W=3U
+.ENDS SCHMITT
+*
+*** PUF cell subckt: SRAM (VTO mismatch = DVT) + Schmitt readout ***
+.SUBCKT PUFCELL ROUT vdd gnd PARAMS: DVT=0
+MNL Q  QB gnd gnd NMOS L=0.6U W=1.5U
+MPL Q  QB vdd vdd PMOS L=0.6U W=3U
+MNR QB Q  gnd gnd N2 L=0.6U W=1.5U
+MPR QB Q  vdd vdd PMOS L=0.6U W=3U
+XSCH gnd Q ROUT vdd SCHMITT
+CQ Q 0 30f
+CQB QB 0 30f
+CR ROUT 0 30f
+.MODEL N2 NMOS LEVEL=1 KP=60E-6 VTO={0.7+DVT} GAMMA=0.3 LAMBDA=0.05 PHI=0.6 TOX=40E-9
+.ENDS PUFCELL
+*
+*** 4x4 array: 16 cells, each different mismatch ***
+X00 B00 vdd 0 PUFCELL PARAMS: DVT=+0.10
+X01 B01 vdd 0 PUFCELL PARAMS: DVT=-0.08
+X02 B02 vdd 0 PUFCELL PARAMS: DVT=+0.12
+X03 B03 vdd 0 PUFCELL PARAMS: DVT=-0.11
+X10 B10 vdd 0 PUFCELL PARAMS: DVT=-0.09
+X11 B11 vdd 0 PUFCELL PARAMS: DVT=+0.09
+X12 B12 vdd 0 PUFCELL PARAMS: DVT=-0.13
+X13 B13 vdd 0 PUFCELL PARAMS: DVT=+0.14
+X20 B20 vdd 0 PUFCELL PARAMS: DVT=+0.11
+X21 B21 vdd 0 PUFCELL PARAMS: DVT=-0.12
+X22 B22 vdd 0 PUFCELL PARAMS: DVT=+0.08
+X23 B23 vdd 0 PUFCELL PARAMS: DVT=-0.10
+X30 B30 vdd 0 PUFCELL PARAMS: DVT=-0.14
+X31 B31 vdd 0 PUFCELL PARAMS: DVT=+0.13
+X32 B32 vdd 0 PUFCELL PARAMS: DVT=-0.07
+X33 B33 vdd 0 PUFCELL PARAMS: DVT=+0.15
+*
+* --- power-up test ---
+.global gnd vdd
+VDDS vdd 0 PWL(0 0 5n 5 400n 5)
+.measure tran b00 FIND V(B00) AT=350n
+.measure tran b01 FIND V(B01) AT=350n
+.measure tran b02 FIND V(B02) AT=350n
+.measure tran b03 FIND V(B03) AT=350n
+.measure tran b10 FIND V(B10) AT=350n
+.measure tran b11 FIND V(B11) AT=350n
+.measure tran b12 FIND V(B12) AT=350n
+.measure tran b13 FIND V(B13) AT=350n
+.measure tran b20 FIND V(B20) AT=350n
+.measure tran b21 FIND V(B21) AT=350n
+.measure tran b22 FIND V(B22) AT=350n
+.measure tran b23 FIND V(B23) AT=350n
+.measure tran b30 FIND V(B30) AT=350n
+.measure tran b31 FIND V(B31) AT=350n
+.measure tran b32 FIND V(B32) AT=350n
+.measure tran b33 FIND V(B33) AT=350n
+.tran 0.1n 0.4us uic
+.END

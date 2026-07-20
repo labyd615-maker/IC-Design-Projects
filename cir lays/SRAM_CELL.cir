@@ -1,0 +1,34 @@
+*** SPICE deck for cell SRAM_CELL{lay} (corrected cross-coupling) ***
+.OPTIONS DEFL=3UM DEFW=3UM DEFAD=70P DEFAS=70P RELTOL=0.01
+.MODEL NMOS NMOS LEVEL=1
++KP=60E-6 VTO=0.7 GAMMA=0.3 LAMBDA=0.05 PHI=0.6
++TOX=40E-9 CGSO=2.0E-10 CGDO=2.0E-10 CJ=.2M
+.MODEL PMOS PMOS LEVEL=1
++KP=20E-6 VTO=0.7 GAMMA=0.4 LAMBDA=0.05 PHI=0.6
++TOX=40E-9 CGSO=3.0E-10 CGDO=3.0E-10 CJ=.2M
+* mismatched NMOS (creates the PUF bit at power-up)
+.MODEL NMIS NMOS LEVEL=1
++KP=60E-6 VTO=0.78 GAMMA=0.3 LAMBDA=0.05 PHI=0.6
++TOX=40E-9 CGSO=2.0E-10 CGDO=2.0E-10 CJ=.2M
+*** 6T SRAM: two cross-coupled inverters + 2 access ***
+* Left inverter: out=Q, in=QB (NMOS has mismatch)
+MNL Q  QB gnd gnd NMIS L=0.6U W=1.5U AS=3.075P AD=38.07P PS=7.3U PD=67.2U
+MPL Q  QB vdd vdd PMOS L=0.6U W=3U   AS=3.075P AD=45.36P PS=7.3U PD=50.1U
+* Right inverter: out=QB, in=Q
+MNR QB Q  gnd gnd NMOS L=0.6U W=1.5U AS=3.075P AD=38.07P PS=7.3U PD=67.2U
+MPR QB Q  vdd vdd PMOS L=0.6U W=3U   AS=3.075P AD=45.36P PS=7.3U PD=50.1U
+* Access transistors
+MAL Q  WL BL  gnd NMOS L=0.6U W=1.5U AS=2.25P AD=3.075P PS=6.3U PD=7.3U
+MAR QB WL BLB gnd NMOS L=0.6U W=1.5U AS=2.25P AD=3.075P PS=6.3U PD=7.3U
+* --- test harness: power-up ---
+.global gnd vdd
+VDDS vdd 0 PWL(0 0 5n 5 400n 5)
+VWL  WL  0 DC 0
+VBL  BL  0 DC 0
+VBLB BLB 0 DC 0
+CQ  Q  0 30f
+CQB QB 0 30f
+.measure tran Q_final  FIND V(Q)  AT=350n
+.measure tran QB_final FIND V(QB) AT=350n
+.tran 0.1n 0.4us uic
+.END

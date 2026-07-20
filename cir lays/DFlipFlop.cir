@@ -1,0 +1,47 @@
+*** SPICE deck for cell DFlipFlop{lay} from library Reliable_CMOS_PUF(1)
+*** Layout tech: mocmos, foundry MOSIS
+.OPTIONS DEFL=3UM DEFW=3UM DEFAD=70P DEFAS=70P RELTOL=0.01
+.MODEL NMOS NMOS LEVEL=1
++KP=60E-6 VTO=0.7 GAMMA=0.3 LAMBDA=0.05 PHI=0.6
++TOX=40E-9 CGSO=2.0E-10 CGDO=2.0E-10 CJ=.2M
+.MODEL PMOS PMOS LEVEL=1
++KP=20E-6 VTO=0.7 GAMMA=0.4 LAMBDA=0.05 PHI=0.6
++TOX=40E-9 CGSO=3.0E-10 CGDO=3.0E-10 CJ=.2M
+*** SUBCIRCUIT Inverter ***
+.SUBCKT _1210159_HW2__Inverter gnd In Out vdd
+Mnmos@0 Out In gnd gnd NMOS L=0.6U W=3U AS=12.915P AD=9.225P PS=27.9U PD=20.1U
+Mpmos@0 Out In vdd vdd PMOS L=0.6U W=6U AS=19.215P AD=9.225P PS=39.9U PD=20.1U
+.ENDS _1210159_HW2__Inverter
+*** SUBCIRCUIT NLatch ***
+.SUBCKT _1210159_HW2__NLatch CLK D gnd Q vdd
+Xinv_20_1@0 gnd net@0 net@75 vdd _1210159_HW2__Inverter
+Xinv_20_1@1 gnd net@75 Q vdd _1210159_HW2__Inverter
+Xinv_20_1@2 gnd CLK net@45 vdd _1210159_HW2__Inverter
+Mnmos@0 net@0 CLK D gnd NMOS L=0.6U W=3U AS=5.535P AD=5.333P PS=9.9U PD=9.75U
+Mnmos@1 Q net@45 net@0 gnd NMOS L=0.6U W=3U AS=5.333P AD=5.13P PS=9.75U PD=9.6U
+Mpmos@0 net@0 net@45 D vdd PMOS L=0.6U W=3U AS=5.535P AD=5.333P PS=9.9U PD=9.75U
+Mpmos@1 Q CLK net@0 vdd PMOS L=0.6U W=3U AS=5.333P AD=5.13P PS=9.75U PD=9.6U
+.ENDS _1210159_HW2__NLatch
+*** SUBCIRCUIT PLatch ***
+.SUBCKT _1210159_HW2__PLatch CLK D gnd Q vdd
+Xinv_20_1@0 gnd net@8 net@36 vdd _1210159_HW2__Inverter
+Xinv_20_1@1 gnd net@36 Q vdd _1210159_HW2__Inverter
+Xinv_20_1@2 gnd CLK net@7 vdd _1210159_HW2__Inverter
+Mnmos@0 net@8 net@7 D gnd NMOS L=0.6U W=3U AS=5.535P AD=5.333P PS=9.9U PD=9.75U
+Mnmos@1 Q CLK net@8 gnd NMOS L=0.6U W=3U AS=5.333P AD=5.13P PS=9.75U PD=9.6U
+Mpmos@0 net@8 CLK D vdd PMOS L=0.6U W=3U AS=5.535P AD=5.333P PS=9.9U PD=9.75U
+Mpmos@1 Q net@7 net@8 vdd PMOS L=0.6U W=3U AS=5.333P AD=5.13P PS=9.75U PD=9.6U
+.ENDS _1210159_HW2__PLatch
+*** TOP LEVEL CELL: DFlipFlop{lay} ***
+XNLatch@0 CLK net@19 gnd Q vdd _1210159_HW2__NLatch
+XPLatch@0 CLK D gnd net@19 vdd _1210159_HW2__PLatch
+* --- test harness ---
+.global gnd vdd
+VDD vdd 0 DC 5
+VA CLK 0 PULSE(5 0 0 1n 1n 4u 8u)
+VB D   0 PULSE(5 0 0 1n 1n 2u 4u)
+CLOAD Q 0 50f
+.measure tran trise TRIG V(Q) VAL=0.5 RISE=1 TARG V(Q) VAL=4.5 RISE=1
+.measure tran tfall TRIG V(Q) VAL=4.5 FALL=1 TARG V(Q) VAL=0.5 FALL=1
+.tran 0.1u 50u
+.END

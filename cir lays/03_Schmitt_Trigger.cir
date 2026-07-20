@@ -1,0 +1,29 @@
+*** SPICE deck for cell 03_Schmitt_Trigger{lay} from library Reliable_CMOS_PUF(1)
+*** Layout tech: mocmos, foundry MOSIS
+.OPTIONS DEFL=3UM DEFW=3UM DEFAD=70P DEFAS=70P RELTOL=0.01
+.MODEL NMOS NMOS LEVEL=1
++KP=60E-6 VTO=0.7 GAMMA=0.3 LAMBDA=0.05 PHI=0.6
++TOX=40E-9 CGSO=2.0E-10 CGDO=2.0E-10 CJ=.2M
+.MODEL PMOS PMOS LEVEL=1
++KP=20E-6 VTO=0.7 GAMMA=0.4 LAMBDA=0.05 PHI=0.6
++TOX=40E-9 CGSO=3.0E-10 CGDO=3.0E-10 CJ=.2M
+*** TOP LEVEL CELL: 03_Schmitt_Trigger{lay}
+Mnmos@0 gnd IN net@24 gnd NMOS L=0.6U W=3U AS=13.95P AD=48.6P PS=29.3U PD=61.2U
+Mnmos@1 net@24 IN OUT gnd NMOS L=0.6U W=3U AS=6.075P AD=13.95P PS=10.35U PD=29.3U
+Mnmos@2 net@24 OUT OUT gnd NMOS L=0.6U W=1.5U AS=6.075P AD=13.95P PS=10.35U PD=29.3U
+Mpmos@1 net@22 IN OUT vdd PMOS L=0.6U W=6U AS=6.075P AD=15.855P PS=10.35U PD=34.9U
+Mpmos@2 vdd IN net@22 vdd PMOS L=0.6U W=6U AS=15.855P AD=54P PS=34.9U PD=67.2U
+Mpmos@3 net@22 OUT OUT vdd PMOS L=0.6U W=3U AS=6.075P AD=15.855P PS=10.35U PD=34.9U
+* --- test harness: pulse input for rise/fall ---
+.global gnd vdd
+VDD vdd 0 DC 5
+VIN IN 0 PULSE(0 5 20n 1n 1n 100n 220n)
+CLOAD OUT 0 250f
+* rise/fall of output (10% to 90% of 5V = 0.5V to 4.5V)
+.measure tran trise TRIG V(OUT) VAL=0.5 RISE=1 TARG V(OUT) VAL=4.5 RISE=1
+.measure tran tfall TRIG V(OUT) VAL=4.5 FALL=1 TARG V(OUT) VAL=0.5 FALL=1
+* propagation delays (50% to 50%)
+.measure tran tphl TRIG V(IN) VAL=2.5 RISE=1 TARG V(OUT) VAL=2.5 FALL=1
+.measure tran tplh TRIG V(IN) VAL=2.5 FALL=1 TARG V(OUT) VAL=2.5 RISE=1
+.tran 0.1n 0.44us
+.END
